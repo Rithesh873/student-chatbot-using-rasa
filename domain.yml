@@ -1,0 +1,236 @@
+version: "3.1"
+
+intents:
+  # Greetings and Basic Interactions
+  - greet
+  - goodbye
+  - thank_you
+  - affirm
+  - deny
+  - bot_challenge
+  
+  # User Mood
+  - mood_great
+  - mood_unhappy
+  
+  # Campus-Related Queries
+  - ask_syllabus
+  - fees_details
+  - clubs
+  - check_attendance
+  - exam_schedule
+  - course_details
+  - campus_facilities
+  - scholarship_information
+  - contact_support
+  - sraap
+  - staff_room_details
+  - hod_details
+  - memo_details
+  - meet_faculty
+  - choose_category
+
+  # Faculty Department Selection Intents
+  - choose_cse
+  - choose_ece
+  - choose_eee
+  - choose_mech
+  - choose_civil
+  - choose_sports
+  - choose_admission
+
+
+
+entities:
+  - category
+
+slots:
+  category:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: category
+
+responses:
+  # General Responses
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+  utter_happy:
+    - text: "I'm glad to hear you're doing well!"
+
+  utter_iamabot:
+    - text: "I am a bot, how can I assist you today?"
+
+  utter_cheer_up:
+    - text: "Here's something to cheer you up!"
+      image: "https://i.imgur.com/5TyE3HG.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you feel better?"
+
+  # Specific Information Responses
+  utter_syllabus_info:
+    - text: |
+        The syllabus includes:
+        - Programming: Fundamentals in C, C++, Java, Python
+        - Data Structures: Algorithms, data organization
+        - Mathematics: Calculus, linear algebra
+        - Networks: Networking protocols and basics
+        - Databases: SQL and NoSQL
+        - Web Technologies: HTML, CSS, JavaScript
+        - OS: Processes, memory management
+        - AI & ML: Intro to AI/ML, supervised learning
+        - Cybersecurity: Cryptography basics
+
+  utter_fees_info:
+    - text: |
+        CSE: ₹85,000 per semester
+        ECE: ₹70,000 per semester
+        Civil: ₹75,000 per semester
+
+        Fee Details:
+        - Total: ₹50,000
+        - Paid: ₹30,000
+        - Pending: ₹20,000
+        - Last Date for Payment: Dec 10
+
+        Payment options: Online portal or finance office.
+
+  utter_clubs_info:
+    - text: |
+        Available Clubs:
+        - Dance Club: Mon, Wed, 2-4 PM
+        - Singing Club: Tue, Thu, 2-4 PM
+        - Coding Club: Fri, Sat, 2-4 PM
+
+  utter_attendance_info:
+    - text: |
+        Attendance Summary:
+        - Total Classes: 85
+        - Attendance Percentage: 85%
+        - Required: 75%
+        Check details at: [SRAAP Portal](https://sraap.in/slogin.php)
+
+  utter_exam_schedule_info:
+    - text: |
+        Exam Schedule:
+        - Mathematics: Nov 25, 10:00 AM
+        - Physics: Nov 27, 2:00 PM
+        - CS: Nov 29, 10:00 AM
+        Full details on the [college portal](https://college.edu/exams).
+
+  utter_course_info:
+    - text: |
+        Enrolled Courses:
+        - Computer Science
+        - Mathematics
+        - Data Science
+        - Artificial Intelligence
+        Access materials in the course portal.
+
+  utter_campus_facilities_info:
+    - text: |
+        Campus Facilities:
+        - Library: 8 AM - 8 PM
+        - Sports Complex: Gym, basketball courts
+        - Hostels: For boys and girls
+        - Cafeteria: 9 AM - 6 PM
+
+  utter_scholarship_info:
+    - text: |
+        Scholarships Available:
+        - Merit-based: Up to 50% waiver
+        - Need-based: Based on income/performance
+        Deadline: Dec 15
+        Details on the [scholarship page](https://college.edu/scholarships).
+
+  utter_contact_support_info:
+    - text: |
+        Contact Support:
+        - Email: support@srucollege.edu
+        - Phone: +91 9876543210
+        Office Hours: 9 AM - 5 PM, Mon-Fri.
+
+  utter_staff_info:
+    - text: |
+        Staff Rooms:
+        - Block 1: Rooms 1203, 1204
+        - Block 2: Rooms 2204, 2106
+        - Block 3: Rooms 3201, 3220
+
+  utter_hod_info:
+    - text: |
+        HOD: Dr. Shasikala
+        - Room: 1203
+        - Contact: 123456789
+
+  utter_memo_info:
+    - text: |
+        Memo Details:
+        - Room: 1204
+        - In-Charge: Shiva Kumar
+        - Contact: 256784235
+
+  utter_sraap_login:
+    - text: |
+        Login at [SRAAP Portal](https://sraap.in/slogin.php).
+
+  # domain 
+  utter_category_choice:
+    - text: |
+        - "Here are the details:"
+        - cse department
+        - ece department
+        - mech department
+        - civil department
+        - sports department
+        - admission department
+        
+
+  utter_cse_faculty:
+    - text: |
+        CSE Faculty:
+        - Dr. Rohan Sharma, rohan.sharma@gmail.com
+        - Dr. Priya Verma, priya.verma@gmail.com
+
+  utter_ece_faculty:
+    - text: |
+        ECE Faculty:
+        - Dr. Arjun Nair, arjun.nair@gmail.com
+        - Dr. Meera Iyer, meera.iyer@gmail.com
+
+  utter_eee_faculty:
+    - text: |
+        EEE Faculty:
+        - Dr. Karthik Reddy, karthik.reddy@gmail.com
+        - Dr. Sneha Patel, sneha.patel@gmail.com
+
+  utter_mech_faculty:
+    - text: |
+        Mech Faculty:
+        - Dr. Rajesh Gupta, rajesh.gupta@gmail.com
+        - Dr. Anjali Menon, anjali.menon@gmail.com
+
+  utter_civil_faculty:
+    - text: |
+        Civil Faculty:
+        - Dr. Vikram Desai, vikram.desai@gmail.com
+        - Dr. Nandini Rao, nandini.rao@gmail.com
+
+  utter_sports_faculty:
+    - text: |
+        Sports Faculty:
+        - Mr. Aditya Singh, aditya.singh@gmail.com
+        - Mr. Tarun Kulkarni, tarun.kulkarni@gmail.com
+
+  utter_admission_faculty:
+    - text: |
+        Admission Faculty:
+        - Ms. Kavya Mishra, kavya.mishra@gmail.com
+        - Mr. Rohit Bansal, rohit.bansal@gmail.com
+
+
