@@ -1,0 +1,163 @@
+version: "3.1"
+
+stories:
+  - story: greet and feel happy
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: greet and feel sad
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: ask syllabus
+    steps:
+      - intent: ask_syllabus
+      - action: utter_syllabus_info
+
+  - story: inquire fees details
+    steps:
+      - intent: fees_details
+      - action: utter_fees_info
+
+  - story: inquire clubs
+    steps:
+      - intent: clubs
+      - action: utter_clubs_info
+
+  - story: check attendance
+    steps:
+      - intent: check_attendance
+      - action: utter_attendance_info
+
+  - story: inquire exam schedule
+    steps:
+      - intent: exam_schedule
+      - action: utter_exam_schedule_info
+
+  - story: inquire course details
+    steps:
+      - intent: course_details
+      - action: utter_course_info
+
+  - story: inquire campus facilities
+    steps:
+      - intent: campus_facilities
+      - action: utter_campus_facilities_info
+
+  - story: inquire scholarship information
+    steps:
+      - intent: scholarship_information
+      - action: utter_scholarship_info
+
+  - story: contact support
+    steps:
+      - intent: contact_support
+      - action: utter_contact_support_info
+
+  - story: staff room inquiry
+    steps:
+      - intent: staff_room_details
+      - action: utter_staff_info
+
+  - story: inquiry about HOD details
+    steps:
+      - intent: hod_details
+      - action: utter_hod_info
+
+  - story: memo details
+    steps:
+      - intent: memo_details
+      - action: utter_memo_info
+
+  - story: sraap login
+    steps:
+      - intent: sraap
+      - action: utter_sraap_login
+
+  # Department Category Stories
+  - story: user chooses CSE category
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: meet_faculty
+      - action: utter_category_choice
+      - intent: choose_cse
+      - action: utter_cse_faculty
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: user chooses ECE category
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: meet_faculty
+      - action: utter_category_choice
+      - intent: choose_ece
+      - action: utter_ece_faculty
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: user chooses EEE category
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: meet_faculty
+      - action: utter_category_choice
+      - intent: choose_eee
+      - action: utter_eee_faculty
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: user chooses Mech category
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: meet_faculty
+      - action: utter_category_choice
+      - intent: choose_mech
+      - action: utter_mech_faculty
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: user chooses Civil category
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: meet_faculty
+      - action: utter_category_choice
+      - intent: choose_civil
+      - action: utter_civil_faculty
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: user chooses Sports category
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: meet_faculty
+      - action: utter_category_choice
+      - intent: choose_sports
+      - action: utter_sports_faculty
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: user chooses Admission category
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: meet_faculty
+      - action: utter_category_choice
+      - intent: choose_admission
+      - action: utter_admission_faculty
+      - intent: goodbye
+      - action: utter_goodbye
+

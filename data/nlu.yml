@@ -1,0 +1,252 @@
+version: "3.1"
+
+nlu:
+  # Greetings and Basic Interactions
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - hey there
+      - sup
+      - what's up
+      - good morning
+      - good evening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - goodbye
+      - bye
+      - bye bye
+      - see you later
+      - have a nice day
+      - see you around
+      - good night
+
+  - intent: thank_you
+    examples: |
+      - thanks
+      - thank you
+      - thanks bye
+      - great
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - yay
+      - yas
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - sure
+      - yeah
+      - ok
+      - fine
+      - cool
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - not really
+      - no way
+      - nah
+      - nope
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - are you alive?
+
+  # User Mood
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling awesome
+      - wonderful
+      - I am feeling good
+      - I am great
+      - super stoked
+      - so good
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel good
+      - I am disappointed
+      - feeling down
+      - unhappy
+      - overwhelmed
+
+  # Campus-Related Queries
+  - intent: ask_syllabus
+    examples: |
+      - What is the syllabus for this semester?
+      - Can you show me the syllabus?
+      - I need today's syllabus
+      - syllabus?
+      - What's the topic this week?
+      - What are we learning today?
+
+  - intent: fees_details
+    examples: |
+      - How much are the fees?
+      - Show me my pending fees
+      - What's the fee structure?
+      - How much fees is left to pay?
+
+  - intent: clubs
+    examples: |
+      - which clubs are there?
+      - club
+      - clubs available
+      - club timings
+      - extracurricular activities
+
+  - intent: check_attendance
+    examples: |
+      - Show my attendance
+      - How much attendance do I have?
+      - Do I have enough attendance?
+      - How many classes have I attended?
+
+  - intent: exam_schedule
+    examples: |
+      - Show me the exam schedule
+      - exam dates
+      - next exam?
+      - exam timetable
+
+  - intent: course_details
+    examples: |
+      - What courses am I enrolled in?
+      - my courses
+      - course list
+      - I want to see my subjects
+
+  - intent: campus_facilities
+    examples: |
+      - What facilities does the campus offer?
+      - Does the college have a library?
+      - Is there a gym on campus?
+      - Tell me about the hostel facilities
+
+  - intent: scholarship_information
+    examples: |
+      - any scholarships available?
+      - How can I apply for a scholarship?
+      - What are the scholarship criteria?
+      - Tell me about scholarships
+
+  - intent: contact_support
+    examples: |
+      - I need help with my account
+      - Can I talk to support?
+      - Contact support
+      - How can I reach the help desk?
+      - I need assistance
+
+  - intent: sraap
+    examples: |
+      - sraap login
+      - SR portal
+      - How to log in to the SR system?
+      - student portal
+
+  - intent: staff_room_details
+    examples: |
+      - staff room
+      - where is the staff room?
+      - how many staff rooms are there?
+      - block 1 staff room numbers
+      - block 2 staff room locations
+
+  - intent: hod_details
+    examples: |
+      - hod
+      - hod room number
+      - hod contact number
+      - hod name
+      - cse hod
+
+  - intent: memo_details
+    examples: |
+      - room number
+      - contact info
+      - incharge name
+      - who is in charge?
+
+  - intent: meet_faculty
+    examples: |
+      - faculty
+      - faculty member
+      - professor
+      - meet faculty
+      - how to meet faculty
+      - I would like to talk to a professor
+      - Can I meet with a faculty member?
+      - I need to discuss something with a professor
+      - How do I set up a meeting with a faculty member?
+      - professor
+      - meet faculty
+      - consultation with a professor
+
+  - intent: choose_cse
+    examples: |
+      - cse
+      - CSE
+      - cse faculty
+      - CSe faculty
+
+intents:
+  - intent: choose_ece
+    examples: |
+      - ECE
+      - ece
+      - ece faculty
+      - ECE faculty
+
+  - intent: choose_eee
+    examples: |
+      - eee 
+      - EEE
+      - eee faculty
+      - ECE faculty  # Note: It seems like 'ECE faculty' should not be here for EEE
+
+  - intent: choose_mech
+    examples: |
+      - Mech
+      - MECH
+      - mech faculty
+      - Mech faculty  # Fixing duplicated 'Mech'
+
+  - intent: choose_civil
+    examples: |
+      - Civil
+      - civil faculty
+      - Civil faculty
+
+  - intent: choose_sports
+    examples: |
+      - Sports
+      - sports faculty
+      - sports department
+
+  - intent: choose_admission
+    examples: |
+      - Admission faculty
+      - admission department
+      - Admission office

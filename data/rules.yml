@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+  # Rule to respond when the user says goodbye
+  - rule: Respond to goodbye
+    steps:
+      - intent: goodbye       # User triggers the goodbye intent
+      - action: utter_goodbye # Bot responds with the goodbye utterance
+
+  # Rule to respond when the user challenges if it's a bot
+  - rule: Respond to bot challenge
+    steps:
+      - intent: bot_challenge # User challenges the bot
+      - action: utter_iamabot # Bot responds by confirming it's a bot
+
+  # Rule to respond when the user greets the bot
+  - rule: Respond to greeting
+    steps:
+      - intent: greet         # User greets the bot
+      - action: utter_greet
+
+  # Rule to handle a thank you response
+  - rule: Respond to thank you
+    steps:
+      - intent: thank_you     # User thanks the bot
+      - action: utter_happy   # Bot acknowledges the gratitude
+
+  # Rule for user mood
+  - rule: Respond to a great mood
+    steps:
+      - intent: mood_great    # User expresses feeling great
+      - action: utter_happy
+
+  - rule: Respond to an unhappy mood
+    steps:
+      - intent: mood_unhappy  # User expresses feeling unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
